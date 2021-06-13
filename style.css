@@ -1,0 +1,394 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1p&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+
+*, *:after, *:before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+.header-hr {
+    position: fixed;
+    width: 100%;
+    top: 70px;
+    left: 0;
+    height: 2px;
+    background: #000;
+    
+}
+
+.header-logo > img {
+    width: 250px;
+}
+
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+
+.header:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background: #fff;
+}
+
+.header-box {
+    max-width: 90%;
+    margin: auto;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+.header-logo {
+    position: relative;
+    z-index: 3;
+}
+
+.header-list {
+    display: flex;
+    position: relative;
+    z-index: 3;
+}
+
+.header-list > li {
+    margin-left: 20px;
+}
+
+.link {
+    color: #000;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.header-burger {
+    display: none;
+}
+
+a {
+   text-decoration: none; 
+   color: #000;
+   font-size: 20px;
+}
+
+.hr {
+    border: 1px solid rgba(174, 171, 171, 0.367);
+}
+
+.container {
+    width: 60%;
+    margin: auto;
+    text-align: center;
+}
+
+.main {
+    width: 100%;
+    min-height: 100vh;
+    margin-top: 70px;
+    font-size: 32px;
+}
+
+.image-container {
+    background: url("./img/main.svg") no-repeat;
+    height: 600px;
+    width: 98%;
+}
+
+.main-image {
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+.inner-main { 
+    width: 80%;
+    margin: auto;
+}
+
+.inner-main > p {
+    margin: 30px 0 30px;
+    font-family: 'M PLUS 1p', sans-serif;
+    font-size: 30px;
+    line-height: 170%;
+}
+
+.main-hr {
+    border: 1px solid rgba(0, 0, 0, 0.694);
+    width: 75%;
+    margin: auto;
+}
+
+.section1 {
+    width: 100%;
+    min-height: 100vh;
+    margin-top: 70px;
+}
+
+h2 {
+    font-size: 52px;
+}
+
+.articles {
+    width: 80%;
+    margin: auto;
+}
+
+.inner-articles {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.right > p,
+.left > p {
+    font-size: 20px;
+    font-family: 'Source Sans Pro', sans-serif;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+.right > img,
+.left > img {
+    margin-bottom: 20px;
+}
+
+.right,
+.left {
+    width: 50%;
+    margin: 20px 0 20px;
+}
+
+.footer {
+    margin-top: 80px;
+    width: 100%;
+    min-height: 100vh;
+    background: #000;
+    color: #fff;
+}
+
+.upper-text {
+    padding-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.inner-footer {
+    width: 50%;
+    margin: auto;
+}
+
+.footer-center {
+    margin-top: 70px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    line-height: 140%;
+}
+
+.footer-center > img {
+    max-width: 250px;
+}
+
+.social {
+    display: flex;
+    gap: 20px;
+}
+
+.social > a {
+    color: #fff;
+    text-decoration: underline;
+    font-size: 16px;
+}
+
+.bottom-footer{
+    margin-top: 60px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+@media(max-width: 767px) {
+
+    .main {
+        padding-top: 50px;
+    }
+
+    .wrapper {
+        width: 100%;
+    }
+
+    .header-box {
+        height: 50px;
+    }
+
+    .header-burger {
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 20px;
+        z-index: 3;
+    }
+
+    .header-burger > span {
+        content: '';
+        background: #000;
+        width: 100%;
+        height: 2px;
+        position: absolute;
+        top: 9px;
+        left: 0;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.517);
+        transition: .3s;
+    }
+
+    .header-burger:before,
+    .header-burger:after {
+        content: '';
+        background: #000;
+        width: 100%;
+        height: 2px;
+        position: absolute;
+        left: 0;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.517);
+        transition: .3s;
+    }
+
+    .header-burger:before {
+        top: 0;
+
+    }
+    .header-burger:after{
+        bottom: 0;
+    }
+
+    .header-burger.process > span {
+        transform: scale(0);
+    }
+
+    .header-burger.process:before {
+        transform: rotate(135deg);
+        top: 9px;
+    }
+
+    .header-burger.process:after {
+        transform: rotate(225deg);
+        bottom: 9px;
+    }
+
+    .menu {
+        position: fixed;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        height: 80%;
+        background: rgb(255, 255, 255);
+        color: #fff;
+        padding-top: 80px;
+        transition: .4s;
+    }
+
+    .menu.process {
+        top: 0;
+    }
+
+    .header-list {
+        width: 100%;
+        display: block;
+        text-align: center;
+    }
+
+    .header-hr {
+        top: 50px;
+    }
+
+    .header-list > li {
+        font-weight: bolder;
+        letter-spacing: .2rem;
+        margin-top: 20px;
+    }
+
+    .container {
+        width: 100%;
+        margin: auto;
+    }
+
+    .container > h1 {
+        margin-top: 20px;
+        font-size: 36px;
+    }
+
+    .container > p {
+        font-size: 16px;
+    }
+
+    .image-container {
+        background-size: 100%;
+        height: 260px;
+        width: 100%;
+    }
+
+    .main-hr,
+    .articles,
+    .left,
+    .right  {
+        width: 100%;
+    }
+
+    .right > img, .left > img {
+        margin-bottom: 20px;
+        width: 90%;
+    }
+
+    .inner-articles {
+        flex-direction: column-reverse;
+    }
+
+    .hide-word {
+        display: none;
+    }
+}
+
+@media(max-width: 495px) {
+
+    .main {
+        padding-top: 20px;
+    }
+
+    .container > h1 {
+        font-size: 32px;
+    }
+
+    .inner-main > p {
+        font-size: 24px;
+    }
+
+    .section1 {
+        margin-top: 20px;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+
+    .upper-text {
+        font-size: 18px;
+    }
+}
